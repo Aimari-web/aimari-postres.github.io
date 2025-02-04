@@ -11,7 +11,7 @@
             font-family: 'Playfair Display', serif;
             text-align: center;
             margin: 50px;
-            background-color: #fef6f8; /* Color de fondo similar a la interfaz principal */
+            background-color: #fef6f8;
             padding: 50px;
             position: relative;
         }
@@ -24,11 +24,11 @@
             background: rgba(255, 255, 255, 0.8);
             padding: 20px;
             border-radius: 10px;
-            margin-bottom: 20px; /* Espacio entre secciones */
+            margin-bottom: 20px;
         }
 
         .logo {
-            width: 300px; /* Aumenté el tamaño a 300px */
+            width: 300px;
             height: auto;
             margin-bottom: 10px;
         }
@@ -61,15 +61,13 @@
             height: 20px;
         }
 
-        /* Estilos para centrar el botón de "Volver a la página principal" */
         .volver-container {
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-top: 30px; /* Espacio respecto a la sección anterior */
+            margin-top: 30px;
         }
 
-        /* Decoraciones en las esquinas */
         .decor {
             position: absolute;
             width: 80px;
@@ -96,7 +94,6 @@
             right: 20px;
         }
 
-        /* Mensaje de bienvenida */
         .welcome-message {
             font-size: 24px;
             color: #e91e63;
@@ -105,13 +102,12 @@
             font-style: italic;
         }
 
-        /* Efecto de rosas flotantes rojas usando una imagen */
         .rose {
             position: absolute;
             top: -50px;
-            width: 50px; /* Ajusta el tamaño de la rosa */
+            width: 50px;
             height: 50px;
-            background-image: url('rose-red.png'); /* Aquí debes poner la URL de tu imagen de rosa roja */
+            background-image: url('rose-red.png');
             background-size: contain;
             background-repeat: no-repeat;
             animation: floatRose 5s infinite ease-in-out;
@@ -121,6 +117,44 @@
             0% { top: -50px; opacity: 0.9; transform: scale(0.5); }
             50% { top: 50vh; opacity: 1; transform: scale(1); }
             100% { top: 100vh; opacity: 0.9; transform: scale(0.5); }
+        }
+
+        /* Media Queries para dispositivos móviles */
+        @media (max-width: 768px) {
+            .logo {
+                width: 250px; /* Ajusta el tamaño del logo */
+            }
+            .welcome-message {
+                font-size: 20px; /* Ajusta el tamaño del mensaje de bienvenida */
+            }
+            button {
+                font-size: 14px; /* Ajusta el tamaño de los botones */
+                padding: 12px 25px;
+            }
+            .container {
+                padding: 15px; /* Ajusta el espacio interno */
+            }
+            .rose {
+                width: 40px; /* Ajusta el tamaño de las rosas flotantes */
+                height: 40px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                width: 200px; /* Ajusta aún más el tamaño del logo */
+            }
+            .welcome-message {
+                font-size: 16px; /* Ajusta aún más el tamaño del mensaje */
+            }
+            button {
+                font-size: 12px; /* Ajusta aún más el tamaño de los botones */
+                padding: 10px 20px;
+            }
+            .rose {
+                width: 30px; /* Ajusta aún más el tamaño de las rosas */
+                height: 30px;
+            }
         }
     </style>
     <script>
@@ -132,7 +166,6 @@
     </script>
 </head>
 <body>
-    <!-- Elementos decorativos -->
     <img src="postre.jpg" class="decor decor-top-left" alt="Decoración">
     <img src="postre.jpg" class="decor decor-top-right" alt="Decoración">
     <img src="postre.jpg" class="decor decor-bottom-left" alt="Decoración">
@@ -159,12 +192,10 @@
         <button onclick="mostrarSeccion('catalogos')">Volver</button>
     </div>
     
-    <!-- Botón "Volver a la Página Principal" centrado -->
     <div class="volver-container">
         <button onclick="window.location.href='https://aimari-web.github.io/'">Volver a la página principal</button>
     </div>
     
-    <!-- Contenedor de rosas flotantes -->
     <div class="rose" style="left: 10%; animation-delay: 0s;"></div>
     <div class="rose" style="left: 20%; animation-delay: 0.5s;"></div>
     <div class="rose" style="left: 30%; animation-delay: 1s;"></div>
