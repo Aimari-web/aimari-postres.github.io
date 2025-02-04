@@ -16,62 +16,51 @@
             position: relative;
         }
 
-        body {
-            font-family: 'Playfair Display', serif;
-            text-align: center;
-            background-color: #fef6f8;
-            padding: 50px;
-            background-image: url('aimari_postres.jpg'), url('aimari_detalles.jpg');
-            background-position: left center, right center;
-            background-repeat: no-repeat, no-repeat;
-            background-size: 20% auto, 20% auto;
-            position: relative;
-        }
-
-         h1 {
-            color: #e91e63;
-            font-size: 42px;
-            font-weight: bold;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-        }
-
-         .message {
-            font-size: 20px;
-            color: #d81b60;
-            margin-top: 20px;
-            font-weight: bold;
-            font-style: italic;
-            background: rgba(255, 192, 203, 0.2);
-            padding: 15px;
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
             border-radius: 10px;
-            display: inline-block;
+            margin-bottom: 20px; /* Espacio entre secciones */
         }
 
-         .button-container {
-            margin-top: 30px;
-        }
-
-        .button:hover {
-            background-color: #d81b60;
-            transform: scale(1.1);
-        }
-
-         .logo {
-            width: 200px;
+        .logo {
+            width: 300px; /* Aumenté el tamaño a 300px */
             height: auto;
-            display: block;
-            margin: 20px auto;
-            animation: moveSide 2s infinite alternate;
+            margin-bottom: 10px;
         }
 
-        @keyframes moveSide {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(20px); }
+        button {
+            background-color: #E35B9A;
+            color: white;
+            padding: 15px 30px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
         }
 
-        
+        button:hover {
+            background-color: #2B4F80;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .icon {
+            width: 20px;
+            height: 20px;
+        }
+
         /* Estilos para centrar el botón de "Volver a la página principal" */
         .volver-container {
             display: flex;
@@ -126,13 +115,13 @@
 </head>
 <body>
     <!-- Elementos decorativos -->
-    <img src="postre.jpg" class="decor decor-top-left" alt="Decoración" width="80" height="80">
-    <img src="postre.jpg" class="decor decor-top-right" alt="Decoración" width="80" height="80">
-    <img src="postre.jpg" class="decor decor-bottom-left" alt="Decoración" width="80" height="80">
-    <img src="postre.jpg" class="decor decor-bottom-right" alt="Decoración" width="80" height="80">
+    <img src="postre.jpg" class="decor decor-top-left" alt="Decoración">
+    <img src="postre.jpg" class="decor decor-top-right" alt="Decoración">
+    <img src="postre.jpg" class="decor decor-bottom-left" alt="Decoración">
+    <img src="postre.jpg" class="decor decor-bottom-right" alt="Decoración">
 
     <div class="container" id="catalogos">
-        <img src="aimari postres.jpg" alt="Logo Aimari Postres" class="logo" width="300" height="auto">
+        <img src="aimari postres.jpg" alt="Logo Aimari Postres" class="logo">
         <h1>AIMARI POSTRES</h1>
         <p class="welcome-message">¡Bienvenidos a nuestro catálogo de postres deliciosos! 🍰✨</p>
         <button onclick="window.open('catalogo san salentin - aimari postres.pdf', '_blank')">CATÁLOGO</button>
@@ -143,10 +132,10 @@
         <h1>Contáctenos</h1>
         <p class="welcome-message">Síguenos en nuestras redes sociales y comparte la magia de AIMARI. 💖</p>
         <button onclick="window.open('https://www.tiktok.com/@aimari_postres?is_from_webapp=1&sender_device=pc', '_blank')">
-            <img class="icon" src="https://upload.wikimedia.org/wikipedia/en/a/a9/TikTok_logo.svg" alt="TikTok" width="20" height="20"> TikTok
+            <img class="icon" src="https://upload.wikimedia.org/wikipedia/en/a/a9/TikTok_logo.svg" alt="TikTok"> TikTok
         </button>
         <button onclick="window.open('https://www.instagram.com/aimari_postres?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==', '_blank')">
-            <img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" width="20" height="20"> Instagram
+            <img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram"> Instagram
         </button>
         <br>
         <button onclick="mostrarSeccion('catalogos')">Volver</button>
