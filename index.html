@@ -133,6 +133,34 @@
             .welcome-message {
                 font-size: 20px;
             }
+
+            /* Reducir tamaño de las decoraciones en pantallas pequeñas */
+            .decor {
+                width: 50px; /* Reducir tamaño */
+                top: 10px;  /* Subir para evitar que se mezclen */
+                left: 10px;
+                right: 10px;
+            }
+
+            .decor-top-left {
+                top: 10px;
+                left: 10px;
+            }
+
+            .decor-top-right {
+                top: 10px;
+                right: 10px;
+            }
+
+            .decor-bottom-left {
+                bottom: 10px;
+                left: 10px;
+            }
+
+            .decor-bottom-right {
+                bottom: 10px;
+                right: 10px;
+            }
         }
     </style>
     <script>
@@ -145,10 +173,10 @@
 </head>
 <body>
     <!-- Elementos decorativos -->
-    <img src="postre.jpg" class="decor decor-top-left" alt="Decoración">
-    <img src="postre.jpg" class="decor decor-top-right" alt="Decoración">
-    <img src="postre.jpg" class="decor decor-bottom-left" alt="Decoración">
-    <img src="postre.jpg" class="decor decor-bottom-right" alt="Decoración">
+    <img src="decoracion.png" class="decor decor-top-left" alt="Decoración">
+    <img src="decoracion.png" class="decor decor-top-right" alt="Decoración">
+    <img src="decoracion.png" class="decor decor-bottom-left" alt="Decoración">
+    <img src="decoracion.png" class="decor decor-bottom-right" alt="Decoración">
 
     <div class="container" id="catalogos">
         <img src="aimari postres.jpg" alt="Logo Aimari Postres" class="logo">
