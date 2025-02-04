@@ -11,7 +11,7 @@
             font-family: 'Playfair Display', serif;
             text-align: center;
             margin: 0;
-            background-color: #fef6f8; /* Color de fondo similar a la interfaz principal */
+            background-color: #fef6f8; /* Color de fondo principal */
             padding: 0;
             position: relative;
         }
@@ -21,7 +21,6 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            background: rgba(255, 255, 255, 0.8);
             padding: 20px;
             border-radius: 10px;
             margin-bottom: 20px; /* Espacio entre secciones */
@@ -29,6 +28,7 @@
             max-width: 800px; /* Limita el tamaño máximo del contenedor */
             margin-left: auto;
             margin-right: auto;
+            background: transparent; /* Fondo transparente */
         }
 
         .logo {
@@ -132,34 +132,6 @@
 
             .welcome-message {
                 font-size: 20px;
-            }
-
-            /* Reducir tamaño de las decoraciones en pantallas pequeñas */
-            .decor {
-                width: 50px; /* Reducir tamaño */
-                top: 10px;  /* Subir para evitar que se mezclen */
-                left: 10px;
-                right: 10px;
-            }
-
-            .decor-top-left {
-                top: 10px;
-                left: 10px;
-            }
-
-            .decor-top-right {
-                top: 10px;
-                right: 10px;
-            }
-
-            .decor-bottom-left {
-                bottom: 10px;
-                left: 10px;
-            }
-
-            .decor-bottom-right {
-                bottom: 10px;
-                right: 10px;
             }
         }
     </style>
