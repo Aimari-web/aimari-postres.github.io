@@ -5,13 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AIMARI POSTRES</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap');
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Playfair Display', serif;
             text-align: center;
             margin: 50px;
-            background: url('aimari postres.jpg') no-repeat center center fixed;
-            background-size: cover;
+            background-color: #fef6f8; /* Color de fondo similar a la interfaz principal */
+            padding: 50px;
+            position: relative;
         }
+
         .container {
             display: flex;
             flex-direction: column;
@@ -22,11 +26,13 @@
             border-radius: 10px;
             margin-bottom: 20px; /* Espacio entre secciones */
         }
+
         .logo {
             width: 300px; /* Aumenté el tamaño a 300px */
             height: auto;
             margin-bottom: 10px;
         }
+
         button {
             background-color: #E35B9A;
             color: white;
@@ -41,22 +47,80 @@
             justify-content: center;
             gap: 10px;
         }
+
         button:hover {
             background-color: #2B4F80;
         }
+
         .hidden {
             display: none;
         }
+
         .icon {
             width: 20px;
             height: 20px;
         }
+
         /* Estilos para centrar el botón de "Volver a la página principal" */
         .volver-container {
             display: flex;
             justify-content: center;
             align-items: center;
             margin-top: 30px; /* Espacio respecto a la sección anterior */
+        }
+
+        /* Decoraciones en las esquinas */
+        .decor {
+            position: absolute;
+            width: 80px;
+            opacity: 0.7;
+        }
+
+        .decor-top-left {
+            top: 20px;
+            left: 20px;
+        }
+
+        .decor-top-right {
+            top: 20px;
+            right: 20px;
+        }
+
+        .decor-bottom-left {
+            bottom: 20px;
+            left: 20px;
+        }
+
+        .decor-bottom-right {
+            bottom: 20px;
+            right: 20px;
+        }
+
+        /* Mensaje de bienvenida */
+        .welcome-message {
+            font-size: 24px;
+            color: #e91e63;
+            font-weight: bold;
+            margin-top: 30px;
+            font-style: italic;
+        }
+
+        /* Efecto de rosas flotantes rojas usando una imagen */
+        .rose {
+            position: absolute;
+            top: -50px;
+            width: 50px; /* Ajusta el tamaño de la rosa */
+            height: 50px;
+            background-image: url('rose-red.png'); /* Aquí debes poner la URL de tu imagen de rosa roja */
+            background-size: contain;
+            background-repeat: no-repeat;
+            animation: floatRose 5s infinite ease-in-out;
+        }
+
+        @keyframes floatRose {
+            0% { top: -50px; opacity: 0.9; transform: scale(0.5); }
+            50% { top: 50vh; opacity: 1; transform: scale(1); }
+            100% { top: 100vh; opacity: 0.9; transform: scale(0.5); }
         }
     </style>
     <script>
@@ -68,15 +132,23 @@
     </script>
 </head>
 <body>
+    <!-- Elementos decorativos -->
+    <img src="decoracion.png" class="decor decor-top-left" alt="Decoración">
+    <img src="decoracion.png" class="decor decor-top-right" alt="Decoración">
+    <img src="decoracion.png" class="decor decor-bottom-left" alt="Decoración">
+    <img src="decoracion.png" class="decor decor-bottom-right" alt="Decoración">
+
     <div class="container" id="catalogos">
         <img src="aimari postres.jpg" alt="Logo Aimari Postres" class="logo">
         <h1>AIMARI POSTRES</h1>
+        <p class="welcome-message">¡Bienvenidos a nuestro catálogo de postres deliciosos! 🍰✨</p>
         <button onclick="window.open('catalogo san salentin - aimari postres.pdf', '_blank')">CATÁLOGO</button>
         <button onclick="mostrarSeccion('contactenos')">CONTACTENOS</button>
     </div>
     
     <div class="container hidden" id="contactenos">
         <h1>Contáctenos</h1>
+        <p class="welcome-message">Síguenos en nuestras redes sociales y comparte la magia de AIMARI. 💖</p>
         <button onclick="window.open('https://www.tiktok.com/@aimari_postres?is_from_webapp=1&sender_device=pc', '_blank')">
             <img class="icon" src="https://upload.wikimedia.org/wikipedia/en/a/a9/TikTok_logo.svg" alt="TikTok"> TikTok
         </button>
@@ -92,5 +164,15 @@
         <button onclick="window.location.href='https://aimari-web.github.io/'">Volver a la página principal</button>
     </div>
     
+    <!-- Contenedor de rosas flotantes -->
+    <div class="rose" style="left: 10%; animation-delay: 0s;"></div>
+    <div class="rose" style="left: 20%; animation-delay: 0.5s;"></div>
+    <div class="rose" style="left: 30%; animation-delay: 1s;"></div>
+    <div class="rose" style="left: 40%; animation-delay: 1.5s;"></div>
+    <div class="rose" style="left: 50%; animation-delay: 2s;"></div>
+    <div class="rose" style="left: 60%; animation-delay: 2.5s;"></div>
+    <div class="rose" style="left: 70%; animation-delay: 3s;"></div>
+    <div class="rose" style="left: 80%; animation-delay: 3.5s;"></div>
+    <div class="rose" style="left: 90%; animation-delay: 4s;"></div>
 </body>
 </html>
