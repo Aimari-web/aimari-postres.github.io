@@ -10,9 +10,9 @@
         body {
             font-family: 'Playfair Display', serif;
             text-align: center;
-            margin: 50px;
+            margin: 0;
             background-color: #fef6f8; /* Color de fondo similar a la interfaz principal */
-            padding: 50px;
+            padding: 0;
             position: relative;
         }
 
@@ -25,10 +25,15 @@
             padding: 20px;
             border-radius: 10px;
             margin-bottom: 20px; /* Espacio entre secciones */
+            width: 100%;
+            max-width: 800px; /* Limita el tamaño máximo del contenedor */
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .logo {
-            width: 300px; /* Aumenté el tamaño a 300px */
+            width: 100%;
+            max-width: 300px; /* Aumenté el tamaño a 300px */
             height: auto;
             margin-bottom: 10px;
         }
@@ -104,6 +109,31 @@
             margin-top: 30px;
             font-style: italic;
         }
+
+        /* Media query para mejorar la visualización en pantallas pequeñas */
+        @media screen and (max-width: 768px) {
+            body {
+                padding: 20px;
+            }
+
+            .container {
+                padding: 15px;
+                margin-bottom: 15px;
+            }
+
+            .logo {
+                max-width: 250px;
+            }
+
+            button {
+                padding: 12px 24px;
+                font-size: 14px;
+            }
+
+            .welcome-message {
+                font-size: 20px;
+            }
+        }
     </style>
     <script>
         function mostrarSeccion(seccion) {
@@ -115,10 +145,10 @@
 </head>
 <body>
     <!-- Elementos decorativos -->
-    <img src="postre.jpg" class="decor decor-top-left" alt="Decoración">
-    <img src="postre.jpg" class="decor decor-top-right" alt="Decoración">
-    <img src="postre.jpg" class="decor decor-bottom-left" alt="Decoración">
-    <img src="postre.jpg" class="decor decor-bottom-right" alt="Decoración">
+    <img src="decoracion.png" class="decor decor-top-left" alt="Decoración">
+    <img src="decoracion.png" class="decor decor-top-right" alt="Decoración">
+    <img src="decoracion.png" class="decor decor-bottom-left" alt="Decoración">
+    <img src="decoracion.png" class="decor decor-bottom-right" alt="Decoración">
 
     <div class="container" id="catalogos">
         <img src="aimari postres.jpg" alt="Logo Aimari Postres" class="logo">
