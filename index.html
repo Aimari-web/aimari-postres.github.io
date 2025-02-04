@@ -51,6 +51,23 @@
             width: 20px;
             height: 20px;
         }
+        /* Fijar el botón "Volver" en la parte inferior */
+        .volver-btn {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #E35B9A;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        .volver-btn:hover {
+            background-color: #2B4F80;
+        }
     </style>
     <script>
         function mostrarSeccion(seccion) {
@@ -76,9 +93,9 @@
         <button onclick="window.open('https://www.instagram.com/aimari_postres?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==', '_blank')">
             <img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram"> Instagram
         </button>
-        <br>
-        <!-- Botón "Volver" que lleva a la página principal -->
-        <button onclick="window.location.href='https://aimari-web.github.io/'">Volver a la página principal</button>
     </div>
+    
+    <!-- Botón "Volver" fijo en la parte inferior -->
+    <button class="volver-btn" onclick="window.location.href='https://aimari-web.github.io/'">Volver a la página principal</button>
 </body>
 </html>
