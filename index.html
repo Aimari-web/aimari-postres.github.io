@@ -17,10 +17,10 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 100vh;
             background: rgba(255, 255, 255, 0.8);
             padding: 20px;
             border-radius: 10px;
+            margin-bottom: 20px; /* Espacio entre secciones */
         }
         .logo {
             width: 300px; /* Aumenté el tamaño a 300px */
@@ -51,22 +51,12 @@
             width: 20px;
             height: 20px;
         }
-        /* Fijar el botón "Volver" en la parte inferior */
-        .volver-btn {
-            position: fixed;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: #E35B9A;
-            color: white;
-            padding: 15px 30px;
-            border: none;
-            cursor: pointer;
-            font-size: 16px;
-            border-radius: 5px;
-        }
-        .volver-btn:hover {
-            background-color: #2B4F80;
+        /* Estilos para centrar el botón de "Volver a la página principal" */
+        .volver-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px; /* Espacio respecto a la sección anterior */
         }
     </style>
     <script>
@@ -96,7 +86,8 @@
         <br>
         <button onclick="mostrarSeccion('catalogos')">Volver</button>
     </div>
-
+    
+    <!-- Botón "Volver a la Página Principal" centrado -->
     <div class="volver-container">
         <button onclick="window.location.href='https://aimari-web.github.io/'">Volver a la página principal</button>
     </div>
