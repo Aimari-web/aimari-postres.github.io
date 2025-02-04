@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIMARI POSTRES</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+            background: url('aimari postres.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .logo {
+            width: 300px; /* Aumenté el tamaño a 300px */
+            height: auto;
+            margin-bottom: 10px;
+        }
+        button {
+            background-color: #E35B9A;
+            color: white;
+            padding: 15px 30px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        button:hover {
+            background-color: #2B4F80;
+        }
+        .hidden {
+            display: none;
+        }
+        .icon {
+            width: 20px;
+            height: 20px;
+        }
+    </style>
+    <script>
+        function mostrarSeccion(seccion) {
+            document.getElementById('catalogos').classList.add('hidden');
+            document.getElementById('contactenos').classList.add('hidden');
+            document.getElementById(seccion).classList.remove('hidden');
+        }
+    </script>
+</head>
+<body>
+    <div class="container" id="catalogos">
+        <img src="aimari postres.jpg" alt="Logo Aimari Postres" class="logo">
+        <h1>AIMARI POSTRES</h1>
+        <button onclick="window.open('https://drive.google.com/file/d/1xqOnKpWOG1PHMGoo3GSwNafNRqcyzMhe/view?usp=sharing', '_blank')">CATÁLOGO</button>
+        <button onclick="mostrarSeccion('contactenos')">CONTACTENOS</button>
+    </div>
+    
+    <div class="container hidden" id="contactenos">
+        <h1>Contáctenos</h1>
+        <button onclick="window.open('https://www.tiktok.com/@aimari_postres?is_from_webapp=1&sender_device=pc', '_blank')">
+            <img class="icon" src="https://upload.wikimedia.org/wikipedia/en/a/a9/TikTok_logo.svg" alt="TikTok"> TikTok
+        </button>
+        <button onclick="window.open('https://www.instagram.com/aimari_postres?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==', '_blank')">
+            <img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram"> Instagram
+        </button>
+        <br>
+        <button onclick="mostrarSeccion('catalogos')">Volver</button>
+    </div>
+</body>
+</html>
